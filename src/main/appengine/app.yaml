@@ -1,0 +1,15 @@
+runtime: java
+vm: true
+module: csql
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored
+  secure: always
+
+beta_settings:
+  cloud_sql_instances: <YOUR-PROJECT-ID>:<YOUR-SQL-INSTANCE-ZONE>:<YOUR-SQL-INSTANCE-NAME>
+
+env_variables:
+  SQL_INSTANCE_URL: /cloudsql/<YOUR-PROJECT-ID>:<YOUR-SQL-INSTANCE-ZONE>:<YOUR-SQL-INSTANCE-NAME>
+  SQL_DATABASE_NAME: <YOUR-DATABASE-NAME>
